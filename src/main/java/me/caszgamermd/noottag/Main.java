@@ -1,4 +1,4 @@
-package me.caszgamer.noottag;
+package me.caszgamermd.noottag;
 
 public class Main {
 
