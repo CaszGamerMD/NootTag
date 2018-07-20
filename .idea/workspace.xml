@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-171" />
-    <option name="y" value="22" />
-    <option name="width" value="1721" />
-    <option name="height" value="1054" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-28" />
+    <option name="y" value="32" />
+    <option name="width" value="1296" />
+    <option name="height" value="754" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
