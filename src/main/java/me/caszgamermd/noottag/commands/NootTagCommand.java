@@ -43,6 +43,8 @@ public class NootTagCommand implements CommandExecutor {
                     return true;
                 }
 
+                
+                player.sendMessage("Unknown Command"); //
                 return true;
             }
             player.sendMessage("Unknown Command");
