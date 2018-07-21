@@ -3,3 +3,8 @@ main: me.caszgamermd.noottag.NootTag
 version: ${project.version}
 authors: [Haileykins, CaszGamerMD, Azarexs]
 description: Tag Mini Game Plug-in
+
+commands:
+  noottag:
+    description: Base Player Command
+    aliases: nt
