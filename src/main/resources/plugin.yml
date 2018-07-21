@@ -8,3 +8,6 @@ commands:
   noottag:
     description: Base Player Command
     aliases: nt
+  noottagstaff:
+    description: Staff Commands
+    aliases: nts
