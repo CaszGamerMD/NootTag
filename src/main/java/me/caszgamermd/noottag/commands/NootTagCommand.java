@@ -42,13 +42,14 @@ public class NootTagCommand implements CommandExecutor {
                     player.sendMessage("You Left The LOBBY!"); //
                     return true;
                 }
-
                 
                 player.sendMessage("Unknown Command"); //
                 return true;
             }
-            player.sendMessage("Unknown Command");
+
+            System.out.println("Player Not In Right World");
             return true;
+
         }
         return true;
     }
