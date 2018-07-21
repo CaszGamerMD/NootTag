@@ -1,6 +1,7 @@
 package me.caszgamermd.noottag.arena;
 
-import javax.xml.stream.Location;
+import org.bukkit.Location;
+
 import java.util.HashMap;
 import java.util.UUID;
 

@@ -1,4 +1,5 @@
-Name: ${project.name}
-Version: ${project.version}
-Authors: [Haileykins, CaszGamerMD, Azarexs]
-Description: Tag Mini Game Plug-in
+name: ${project.name}
+main: me.caszgamermd.noottag.NootTag
+version: ${project.version}
+authors: [Haileykins, CaszGamerMD, Azarexs]
+description: Tag Mini Game Plug-in
