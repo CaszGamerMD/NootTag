@@ -1,6 +1,5 @@
 package me.caszgamermd.noottag.commands;
 
-import me.caszgamermd.noottag.utils.GameState;
 import me.caszgamermd.noottag.utils.PlayerState;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -63,7 +62,7 @@ public class NootTagCommand implements CommandExecutor {
                     }
                     return true;
                 }
-                
+
                 player.sendMessage("Unknown Command"); //
                 return true;
             }
