@@ -1,5 +1,8 @@
 package me.caszgamermd.noottag.commands;
 
+import me.caszgamermd.noottag.utils.GameState;
+import me.caszgamermd.noottag.utils.PlayerState;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -124,6 +127,54 @@ public class NootTagStaffCommand implements CommandExecutor {
                 }
 
                 player.sendMessage("Unknown Command");
+                return true;
+
+            }
+
+            if (args[0].equalsIgnoreCase("eject")) {
+                if (args.length == 2) {
+                    for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+                        if (args[1].equalsIgnoreCase(onlinePlayer.getName())) {
+                            if (PlayerState.isState(PlayerState.INGAME, onlinePlayer)
+                                    || PlayerState.isState(PlayerState.INLOBBY, onlinePlayer)) {
+                                // TODO EJECT PLAYER
+                                return true;
+                            }
+
+                            sender.sendMessage("Player Not In Lobby Or Game");
+                            return true;
+
+                        }
+
+                    }
+
+                    sender.sendMessage("Player Not Found");
+                    return true;
+
+                }
+
+                sender.sendMessage("Invalid Command Arguments");
+                return true;
+
+            }
+
+            if (args[0].equalsIgnoreCase("stop")) {
+                if (args.length == 2) {
+                    /*
+                    Arena enum checking below, just need to check
+                    against list of arenas
+                     */
+
+                    if (GameState.isState(GameState.INGAME)) {
+                        // TODO: STOP ARENA IN PROGRESS
+                        return true;
+                    }
+
+                    sender.sendMessage("Area Is Not In Game");
+                    return true;
+                }
+
+                sender.sendMessage("Invalid Command Arguments");
                 return true;
 
             }
