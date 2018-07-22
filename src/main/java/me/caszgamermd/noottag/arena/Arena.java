@@ -1,9 +1,12 @@
 package me.caszgamermd.noottag.arena;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Arena {
 
@@ -17,11 +20,11 @@ public class Arena {
     public Arena(String arenaName, int id, HashMap<UUID, Long> players, int minPlayers, int maxPlayers, boolean activated, HashMap<Integer, Location> region) {
         this.arenaName = arenaName;
         this.id = id;
-        this.players = players;
+        this.players = players == null ? new HashMap<UUID, Long>() : players;
         this.minPlayers = minPlayers;
         this.maxPlayers = maxPlayers;
         this.activated = activated;
-        this.region = region;
+        this.region = region == null ? new HashMap<Integer, Location>() : region;
 
         isStarted = true;
         tagged = null;
@@ -41,6 +44,20 @@ public class Arena {
 
     public void setTagged(UUID tagged) {
         this.tagged = tagged;
+    }
+
+    public void addPlayer(UUID uuid) {
+        players.put(uuid, 0L);
+        Bukkit.getPlayer(uuid).teleport(region.get(2));
+    }
+
+    public void removePlayer(UUID uuid) {
+        players.remove(uuid);
+        int x = ThreadLocalRandom.current().nextInt(0, 15); // THIS IS SUPPOSED TO BE A SPAWN LOCATION
+        int z = ThreadLocalRandom.current().nextInt(0, 15);
+        int y = Bukkit.getWorlds().get(0).getHighestBlockYAt(x, z);
+
+        Bukkit.getPlayer(uuid).teleport(new Location(Bukkit.getWorlds().get(0), x, y, z));
     }
 
     public String getArenaName() {

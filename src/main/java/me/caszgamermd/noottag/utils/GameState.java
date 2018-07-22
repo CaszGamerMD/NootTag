@@ -8,8 +8,7 @@ public enum GameState {
 
     private static GameState state;
 
-    public static void setState(GameState state)
-    {
+    public static void setState(GameState state) {
         GameState.state = state;
     }
 

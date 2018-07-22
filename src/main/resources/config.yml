@@ -1,1 +1,22 @@
 # placeholder comment config.yml
+Arena-settings:
+  Cuboid:
+    Region-1:
+      x:
+      y:
+      z:
+    Region-2:
+      x:
+      y:
+      z:
+    Lobby:
+      x:
+      y:
+      z:
+    Spawn:
+      x:
+      y:
+      z:
+  Minimum-players: 2
+  Maximum-players: 16
+  Countdown: 60
