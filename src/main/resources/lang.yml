@@ -1,1 +1,24 @@
 # placeholder comment lang.yml
+#
+#NootralLang
+UnknownCommand: "&cUnknown Command."
+ArgumentInvalid: "&cInvalid Command Arguments."
+MissingPlayer: "&cPlayer Not Found."
+NotAPlayer: "&cYou Must Be A Player!"
+#
+#NootCommandsLang
+WorldConfirm: "&bWorld {world} confirmed."
+AlreadyInLobby: "&7Your Already In A &bLobby."
+AlreadyInGame: "&7Your Already In A &2Game!"
+BackToLobby: "&6You were teleported back to the &bLOBBY!"
+LeftLobby: "&cYou Left The &bLOBBY!"
+LeftGame: "&cYou Left The &2GAME!"
+WrongWorld: "&c{Player} Not In Right World."
+#
+#NootStaffCommandsLang
+ArenaAdd: "&aA New Arena &b{Name} &ahas been Created."
+ArenaAddSpecify: "&cSpecify Name of Arena to Add."
+ArenaDeleteSpecify: "cSpecify Name of Arena to Delete."
+ArenaRemove: "&cArena &b{Name} &chas been Remove."
+ArenaPos: "&5Arena {PosNum} Recorded {x},{y},{z}."
+NotInEither: "{Player} not in NootTag Lobby or Game."
