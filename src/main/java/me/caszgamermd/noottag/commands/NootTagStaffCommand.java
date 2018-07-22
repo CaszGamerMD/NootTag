@@ -20,7 +20,7 @@ public class NootTagStaffCommand implements CommandExecutor {
 
             if (args.length == 0) {
                 // TODO: HELP MENU
-                System.out.println("Staff Help Menu Recieved");
+                System.out.println("Staff Help Menu Recieved"); //
                 return true;
             }
 
@@ -32,10 +32,10 @@ public class NootTagStaffCommand implements CommandExecutor {
                     on save. There needs to be a check to validate
                     area does not exist already
                      */
-                    System.out.println("Add Arena Command Recieved");
+                    System.out.println("Add Arena Command Recieved"); //
                 }
 
-                player.sendMessage("Specify Name of New Arena");
+                player.sendMessage("Specify Name of New Arena"); //
                 return true;
             }
 
@@ -48,16 +48,16 @@ public class NootTagStaffCommand implements CommandExecutor {
                     There needs to be a check to validate
                     Arena existance
                      */
-                    System.out.println("Remove Arena Command Recieved");
+                    System.out.println("Remove Arena Command Recieved"); //
                 }
 
-                player.sendMessage("Specify Name of Arena to Delete");
+                player.sendMessage("Specify Name of Arena to Delete"); //
                 return true;
             }
 
             if (args[0].equalsIgnoreCase("set")) {
 
-                System.out.println("Set Command Recieved");
+                System.out.println("Set Command Recieved"); //
 
                 if (args.length == 1) {
 
@@ -74,7 +74,7 @@ public class NootTagStaffCommand implements CommandExecutor {
                          */
                         return true;
                     }
-                    sender.sendMessage("Invalid Command Arguments");
+                    sender.sendMessage("Invalid Command Arguments"); //
                     return true;
                 }
 
@@ -86,7 +86,7 @@ public class NootTagStaffCommand implements CommandExecutor {
                          */
                         return true;
                     }
-                    sender.sendMessage("Invalid Command Arguments");
+                    sender.sendMessage("Invalid Command Arguments"); //
                     return true;
                 }
 
@@ -98,7 +98,7 @@ public class NootTagStaffCommand implements CommandExecutor {
                          */
                         return true;
                     }
-                    sender.sendMessage("Invalid Command Arguments");
+                    sender.sendMessage("Invalid Command Arguments"); //
                     return true;
                 }
 
@@ -110,7 +110,7 @@ public class NootTagStaffCommand implements CommandExecutor {
                          */
                         return true;
                     }
-                    sender.sendMessage("Invalid Command Arguments");
+                    sender.sendMessage("Invalid Command Arguments"); //
                     return true;
                 }
 
@@ -122,11 +122,11 @@ public class NootTagStaffCommand implements CommandExecutor {
                          */
                         return true;
                     }
-                    sender.sendMessage("Invalid Command Arguments");
+                    sender.sendMessage("Invalid Command Arguments"); //
                     return true;
                 }
 
-                player.sendMessage("Unknown Command");
+                player.sendMessage("Unknown Command"); //
                 return true;
 
             }
@@ -141,19 +141,19 @@ public class NootTagStaffCommand implements CommandExecutor {
                                 return true;
                             }
 
-                            sender.sendMessage("Player Not In Lobby Or Game");
+                            sender.sendMessage("Player Not In Lobby Or Game"); //
                             return true;
 
                         }
 
                     }
 
-                    sender.sendMessage("Player Not Found");
+                    sender.sendMessage("Player Not Found"); //
                     return true;
 
                 }
 
-                sender.sendMessage("Invalid Command Arguments");
+                sender.sendMessage("Invalid Command Arguments"); //
                 return true;
 
             }
@@ -170,21 +170,21 @@ public class NootTagStaffCommand implements CommandExecutor {
                         return true;
                     }
 
-                    sender.sendMessage("Area Is Not In Game");
+                    sender.sendMessage("Area Is Not In Game"); //
                     return true;
                 }
 
-                sender.sendMessage("Invalid Command Arguments");
+                sender.sendMessage("Invalid Command Arguments"); //
                 return true;
 
             }
 
-            player.sendMessage("Unknown Command");
+            player.sendMessage("Unknown Command"); //
             return true;
 
         }
 
-        sender.sendMessage("You Must Be A Player!");
+        sender.sendMessage("You Must Be A Player!"); //
         return true;
 
     }

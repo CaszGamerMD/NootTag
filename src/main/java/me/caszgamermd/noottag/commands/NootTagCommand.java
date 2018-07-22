@@ -24,7 +24,7 @@ public class NootTagCommand implements CommandExecutor {
 
             if (player.getWorld().getName().equalsIgnoreCase("world")) {
 
-                System.out.println("World world confirmed");
+                System.out.println("World world confirmed"); //
 
                 if (args.length == 0) {
                     // TODO HELP MENU?
@@ -67,7 +67,7 @@ public class NootTagCommand implements CommandExecutor {
                 return true;
             }
 
-            System.out.println("Player Not In Right World");
+            System.out.println("Player Not In Right World"); //
             return true;
 
         }
