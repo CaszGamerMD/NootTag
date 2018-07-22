@@ -27,6 +27,14 @@ public class Arena {
         tagged = null;
     }
 
+    public boolean canJoin() {
+        if (isStarted || players.size() + 1 > maxPlayers) {
+            return false;
+        }
+
+        return true;
+    }
+
     public void setStarted(boolean isStarted) {
         this.isStarted = isStarted;
     }
