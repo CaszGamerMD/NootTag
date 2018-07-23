@@ -29,6 +29,7 @@ public class NootTagCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         World world = player.getWorld(); //
+
         Location lobby = new Location(world, -15019, 85, 7385); //
         Location spawn = new Location(world, -15003, 78, 7434); //
 
@@ -43,17 +44,17 @@ public class NootTagCommand implements CommandExecutor {
             }
 
             if (args[0].equalsIgnoreCase("join")) {
-                player.teleport(lobby); //
+
                 if (PlayerState.isState(PlayerState.INLOBBY, player)) {
                     player.sendMessage("Your Already In A Lobby"); //
                     return true;
                 }
-
                 if (PlayerState.isState(PlayerState.INGAME, player)) {
                     player.sendMessage("Your Already In A Game!"); //
                     return true;
                 }
 
+                player.teleport(lobby); //
                 arenaManager.getArena().addPlayer(player.getUniqueId());
                 player.sendMessage("You were teleported to the LOBBY!"); //
                 return true;
@@ -61,18 +62,22 @@ public class NootTagCommand implements CommandExecutor {
             }
 
             if (args[0].equalsIgnoreCase("leave")) {
-                player.teleport(spawn); //
+
                 if (PlayerState.isState(PlayerState.INLOBBY, player)) {
                     player.sendMessage("You Left The LOBBY!"); //
+                    player.teleport(spawn); //
+                    arenaManager.getArena().removePlayer(player.getUniqueId());
                     return true;
                 }
 
                 if (PlayerState.isState(PlayerState.INGAME, player)) {
                     player.sendMessage("You Left The GAME!"); //
+                    player.teleport(spawn); //
+                    arenaManager.getArena().removePlayer(player.getUniqueId());
                     return true;
                 }
 
-                arenaManager.getArena().removePlayer(player.getUniqueId());
+                player.sendMessage("You aren't in Noot Tag."); //
                 return true;
             }
 

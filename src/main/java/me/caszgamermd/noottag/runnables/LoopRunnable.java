@@ -27,6 +27,7 @@ public class LoopRunnable implements Runnable {
             if (arena.getPlayers().size() > 0) {
                 int waitingFor = arena.getMinPlayers() - arena.getPlayers().size();
 
+                //spams chat, should be a title/ boss bar
                 if (internalRunnableCounter % 10 == 0) {
                     arena.getPlayers().keySet().forEach((key) -> {
                         Bukkit.getPlayer(key).sendMessage("Waiting for " + waitingFor + " players");
@@ -46,7 +47,7 @@ public class LoopRunnable implements Runnable {
 
         switch (GameState.getState()) {
             case WAITING:
-                countdown = 0;
+                countdown = 10;
                 break;
             case INLOBBY:
                 arena.getPlayers().keySet().forEach((key) -> {
